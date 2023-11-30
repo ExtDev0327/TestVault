@@ -1,66 +1,36 @@
-## Foundry
+This repo is an virtual vault for testing which is simply implementing deposit/withdraw functions with whitelisted tokens
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Contracts
 
-Foundry consists of:
+### Vault
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Implement fundemental functions of the vault
 
-## Documentation
+### Errors
 
-https://book.getfoundry.sh/
+Define custom errors for the vault
 
-## Usage
+## Repository Structure
 
-### Build
-
-```shell
-$ forge build
+```ml
+contracts/
+├── Vault — "vault where users can deposit or withdraw any kind of erc20 tokens which is whitelisted on this system"
+└── libraries
+    └── Errors — "contains pre-defined errors on this system"
 ```
 
-### Test
+## Installation
 
-```shell
+This repo uses the Foundry framework for testing.
+To get started, clone the repo
+```bash
+git clone https://github.com/extdev0327/TestVault.git --recurse-submodules
+```
+
+## Testing
+
+Run the Foundry test suite:
+
+```bash
 $ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
 ```
